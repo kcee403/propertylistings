@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "accounting": "^0.4.1",
-    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1",
     "jump.js": "^1.0.2",
     "node-sass": "^4.9.3",
@@ -19,9 +18,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-redux": "^5.0.7"
   }
