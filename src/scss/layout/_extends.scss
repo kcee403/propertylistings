@@ -1,0 +1,48 @@
+%top-border:after {
+  content: "";
+  border-bottom: 1px solid white;
+  display: block;
+  width: 75%;
+  margin: 0px auto;
+  padding-top: 50px;
+  background-color: transparent;
+  color: $gray;
+}
+%bottom-border:before {
+  content: "";
+  border-top: 1px solid white;
+  display: block;
+  width: 75%;
+  margin: 0px auto;
+  padding-top: 50px;
+
+}
+%paraDefault {
+  line-height: 1.5;
+  letter-spacing: 3px;
+  word-spacing: 1px;
+}
+%paraDefault-sm {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  word-spacing: .5px;
+}
+%paraDefault-lg {
+  line-height: 1.8;
+  letter-spacing: 3.3px;
+  word-spacing: 1.7px;
+}
+%overlayDefault {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}

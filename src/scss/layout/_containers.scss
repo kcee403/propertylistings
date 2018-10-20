@@ -1,0 +1,14 @@
+.mapContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 50%;
+    z-index: 2;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.4); //remove
+}

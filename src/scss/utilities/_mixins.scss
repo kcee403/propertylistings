@@ -1,0 +1,69 @@
+@mixin mediaQ($break) {
+  $value: map-get($breakPoint, $break/*key to map, but this key is var that holds the functions param*/);
+  $small:    map-get($breakPoint, 'small'); /*'small' is in the map of variables aka properties*/
+
+   @if $value < $small
+   {
+      @media (max-width: $value)// its setting up the mixin to use either max
+      {                         // or min - width then use value be the min or
+        @content;               // max's value which is based off of the map's
+      }                         // key.
+    }
+  @else
+    {
+      @media (min-width: $value)
+      {
+        @content;
+      }
+    }
+}
+@mixin material-button($name, $foreground, $background, $lightbackground) {
+  .material-button[data-color="#{$name}"] {
+    background: $background;
+    color: $foreground;
+
+    &:hover{
+      background: $lightbackground;
+    }
+
+    &::before{
+      background: $foreground;
+    }
+
+  }
+}
+
+/** === START
+ * the sticky footer mixin
+ **/
+@mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $container-selector: unquote("#container"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%;
+  }
+  body {
+  	margin: 0px;
+  	padding: 0px;
+  }
+  #{$wrapper-selector} {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -$footer-height;
+    #{$container-selector} {
+      padding: 0 0 $footer-height 0;
+    }
+  }
+  #{$footer-selector} {
+    height: $footer-height;
+  }
+}
+
+/**
+ * the sticky footer implementation
+ **/
+@include sticky-footer(0px);
+
+#footer .copyright p {
+  background-color: gray;
+}
+// ===== END OF THE STICKY FOOTER HELPER

@@ -1,0 +1,111 @@
+//========= PETER TICHY ============
+.btn-filter {
+    margin-left: 15px;
+    border-radius: 5px;
+    padding: 3px 14px;
+    font-size: 16px;
+    background-color: $caribbean;
+    color: #fff;
+    border: 1px #fff solid;
+    transition: all 0.3s linear;
+    display: block;
+    width: 100%;
+    &:hover,
+    &:active {
+        background-color: #fff;
+        color: $dark-grey;
+    }
+    span {display: none}
+    @media (min-width: 992px) {
+        strong {display: none;}
+        span {display: inline-block;}
+    }
+}
+.filter {
+
+  .btn-filter {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: auto;
+      @media (min-width: 992px) {
+          top: 50px;
+          width: 80px;
+      }
+  }
+}
+
+.filterBox {
+  font-family: 'Montserrat';
+  color: darken(gray, 17);
+  letter-spacing: .5px;
+   select {
+    background-color: white;
+    color: darken(gray, 5);
+    border-radius: 2px;
+    &:active, &:focus {
+
+      border-color: $caribbean;
+  }
+ }
+}
+
+//====== Material Button =======
+//==============================
+
+.material-button {
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Noto Sans';
+  font-size: 1.4rem;
+  outline: none;
+  overflow: hidden;
+  padding: 0.4rem .9rem;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 8px $gray;
+  width: 85px;
+  transition: transform 0.18s ease-in, box-shadow 0.09s ease-in;
+	// background-image: linear-gradient(45deg, rgb(248, 54, 0), #ff9a00);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 13px $gray;
+  }
+
+  &:hover > .material-icon{
+    margin-left: 0;
+    opacity: 1;
+    transform: scale(1.0);
+    transition: all 150ms ease-out;
+  }
+  &:active > .material-icon{
+    opacity: 1;
+    width: 1.5rem;
+    transition: 0s;
+  }
+  &::before{
+    border-radius: 60%;
+    content: '';
+    display: block;
+    height: 6rem;
+    margin: -3rem 0;
+    opacity: 0;
+    position: relative;
+    top: 0.5rem;
+    transform: scale(3.0);
+    transition: 1s;
+    width: 100%;
+    will-change: opacity, transform;
+  }
+  &:active::before{
+    opacity: 0.4;
+    transform: scale(0.0);
+    transition: 0s;
+  }
+}
+@include material-button("orange", #FFF, linear-gradient(45deg, rgb(248, 54, 0), #ff9a00), lighten(rgb(248, 138, 0), 15%));
+@include material-button("red", #FFF, linear-gradient(45deg, lighten(#dc143c, 18), red), lighten(#dc143c, 15%));
+@include material-button("gray", #FFF, linear-gradient(45deg, lighten(#778899, 18), #778899),lighten($caribbean, 15%));
+@include material-button("blue", white, linear-gradient(45deg, lighten(#778899, 18), #778899),lighten($caribbean, 15%));
+@include material-button("green", #FFF, linear-gradient(45deg, lighten($green, 18), #778899), lighten($green, 1%));
