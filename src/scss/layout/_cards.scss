@@ -9,14 +9,16 @@
     }
 }
 .card {
+    background-color: lighten($lightGray, 8);
+    color: darken(gray, 17);
     border: 3px #fff solid;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
     transition: all 0.3s linear;
     cursor: pointer;
     position: relative;
-    background-color: #fff;
+
     &:hover {
-        background-color: #f3f3f3;
+        background-color: #fff;
         border-color: #f3f3f3;
     }
     padding: 10px;
@@ -79,9 +81,14 @@
     &.is-active {
         border-color: transparentize($caribbean, 0.45);
         border-radius: 4px;
+        background-color: white !important;
+            color: darken(gray, 8);
         .index {
             background-color:  transparentize($caribbean, 0.2);
             border-radius: 2px;
         }
     }
+}
+.fontawesomeIcons {
+  color: gray;
 }

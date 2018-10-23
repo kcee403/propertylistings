@@ -22,7 +22,7 @@ const Header = props =>
   />
 
   <img src={image} />
-  <h1>Property Listings</h1>
+  <h1>Center City Property Listings</h1>
   <button className="btn-filter material-button" onClick={(event) => {event.preventDefault(); props.toggleFilter()}} data-color="gray">Filter</button>
 </header>;
 
