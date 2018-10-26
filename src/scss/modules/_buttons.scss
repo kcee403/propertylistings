@@ -163,6 +163,6 @@
 }
 @include material-button("orange", #FFF, linear-gradient(45deg, rgb(248, 54, 0), #ff9a00), lighten(rgb(248, 138, 0), 15%));
 @include material-button("red", #FFF, linear-gradient(45deg, lighten(#dc143c, 18), red), lighten(#dc143c, 15%));
-@include material-button("gray", #FFF, linear-gradient(45deg, lighten(#778899, 18), #778899),lighten($caribbean, 15%));
+@include material-button("gray", #FFF, linear-gradient(45deg, lighten(#778899, 20), darken(#778899, 19)),lighten(gray, 15%));
 @include material-button("blue", white, linear-gradient(45deg, lighten(#778899, 18), #778899),lighten($caribbean, 15%));
 @include material-button("green", #FFF, linear-gradient(45deg, lighten($green, 18), #778899), lighten($green, 1%));

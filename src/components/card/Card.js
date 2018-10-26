@@ -39,9 +39,17 @@ const Card = ({property, activeProperty, setActiveProperty}) => {
             <Carousel interval={null} indicators={false}>
                 <Carousel.Item>
                     <img alt="c" src={propertyImgs[index]} />
+                    <Carousel.Caption>
+                    <p className="">
+                        {city}<br />{address}
+                    </p>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img alt="1300x900 property image" src={interiorImgs[index]} />
+                    <Carousel.Caption>
+
+                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
 
@@ -51,9 +59,7 @@ const Card = ({property, activeProperty, setActiveProperty}) => {
             <div className="details">
 
                 <span className="index">{index+1}</span>
-                <p className="location">
-                    {city}<br />{address}
-                </p>
+
                 <ul className="features">
                 {/*}    <li className="icon-bed">{bedrooms}<span className="bedColor">bedrooms</span></li>
                     <li className="icon-bath">{bathrooms}<span>bathrooms</span></li>

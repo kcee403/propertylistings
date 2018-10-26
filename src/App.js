@@ -3,10 +3,13 @@ import * as React from 'react';
 import image from './images/location-map.svg';
 import data from './components/data/Data';
 import Card from './components/card/Card';
+import Header from './components/header/Header';
+import Modal from './components/ui/Modal/Modal';
 import GoogleMap from './components/googlemap/GoogleMap';
+import PropertySummary from './components/propertysummary/PropertySummary';
+
 import jump from 'jump.js';
 import {easeInOutCubic} from './utils/Easing';
-import Header from './components/header/Header';
 
 import ReactDependentScript from 'react-dependent-script';
 
@@ -30,6 +33,7 @@ class App extends React.Component {
       priceTo: 1000000,
       filteredProperties: [],
       isFiltering: false,
+      isViewingSummary: false,
     }
     this.setActiveProperty = this.setActiveProperty.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
@@ -54,7 +58,7 @@ class App extends React.Component {
       }
   }
 
-handleFilterChange(e){
+  handleFilterChange(e){
 
     const target = e.target;
     const {value, name} = target;
@@ -130,7 +134,11 @@ handleFilterChange(e){
     })
 
     form.reset();
-}
+  }
+
+  closeSummaryHandler = () => {
+    this.setState({isViewingSummary: false});
+  }
 
   render(){
     const {properties, activeProperty, filterIsVisible, filteredProperties, isFiltering, filterSort} = this.state;
@@ -138,6 +146,12 @@ handleFilterChange(e){
 
     // now sort the propertiesList
       const MAP_KEY = "AIzaSyAtFz6R7OtnNq7L0hemsIpvTJQEG8ZNk_E";
+
+      let propertySummary = null;
+      if(this.state.isViewingSummary=== true) {
+        propertySummary = <PropertySummary />
+      }
+
     return (
       <div>
         {/* listings - Start */}
@@ -178,6 +192,11 @@ handleFilterChange(e){
                 isFiltering={isFiltering} />
 
           </ReactDependentScript>
+
+          <Modal show={this.state.isViewingSummary} modalClosed={this.purchaseCancelHandler}>
+            {propertySummary}
+          </Modal>
+
       </div>
     )
   }
