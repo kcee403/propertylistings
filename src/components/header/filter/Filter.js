@@ -92,7 +92,7 @@ class Filter extends React.Component {
               <label>&nbsp;</label>
               <button className="btn-clear" onClick={(event) => this.props.clearFilter(event, this.form)}>Clear</button>
           </div>
-          <button className="btn-filter material-button" data-color="blue" onClick={(event) =>{event.preventDefault(); this.props.onToggleFilter()}}>
+          <button className="btn-filter material-button" data-color="gray" onClick={(event) =>{event.preventDefault(); this.props.onToggleFilter()}}>
               <strong>X</strong>
               <span>Close</span>
           </button>

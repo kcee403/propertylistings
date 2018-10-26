@@ -3,7 +3,7 @@ const data = {
     {
         "_id": "593e9297e17df20c4a237d42",
         "index": 0,
-        "price": 937180,
+        "price": 430180,
         "picture": "../../images/properties/maps3.jpg",
         // "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
         "city": "Philadelphia",
@@ -17,7 +17,7 @@ const data = {
     {
         "_id": "593e9297ec4cca9c56bf61af",
         "index": 1,
-        "price": 703725,
+        "price": 603700,
         "picture": "./images/properties/map3.jpg",
         // "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg",
         "city": "Philadelphia",
@@ -31,7 +31,7 @@ const data = {
     {
         "_id": "593e929773c71925e5d7c11c",
         "index": 2,
-        "price": 837111,
+        "price": 337100,
         "picture": "./images/properties/map3.jpg",
         // "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
         "city": "Philadelphia",
@@ -45,7 +45,7 @@ const data = {
     {
         "_id": "593e92973d4d15eedb129aee",
         "index": 3,
-        "price": 648223,
+        "price": 648000,
         "picture": "./images/properties/map3.jpg",
         "city": "Philadelphia",
         "address": "854 Pine Street",
@@ -58,7 +58,7 @@ const data = {
     {
         "_id": "593e929728b7f8543b7907e1",
         "index": 4,
-        "price": 771826,
+        "price": 471800,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg",
         "city": "Philadelphia",
         "address": "Arch Street",
@@ -71,7 +71,7 @@ const data = {
     {
         "_id": "593e92975996a6263d146444",
         "index": 5,
-        "price": 686238,
+        "price": 586200,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
         "city": "Philadelphia",
         "address": "543 Spruce Street",
@@ -84,7 +84,7 @@ const data = {
     {
         "_id": "593e9297a13e246da5ba0884",
         "index": 6,
-        "price": 595377,
+        "price": 595300,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg",
         "city": "Philadelphia",
         "address": "787 Federal Street",
@@ -97,7 +97,7 @@ const data = {
     {
         "_id": "593e9297afa51a013fcd07d5",
         "index": 7,
-        "price": 696189,
+        "price": 696100,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
         "city": "Philadelphia",
         "address": "416 Wilder Street",
@@ -110,7 +110,7 @@ const data = {
     {
         "_id": "593e92972bd8fd05f2ab1a89",
         "index": 8,
-        "price": 716114,
+        "price": 516000,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg",
         "city": "Philadelphia",
         "address": "437 Mill Street",
@@ -123,7 +123,7 @@ const data = {
     {
         "_id": "593e9297fe2e6d32c859ecf4",
         "index": 9,
-        "price": 739852,
+        "price": 439000,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg",
         "city": "Philadelphia",
         "address": "553 Spring Garden Street",
@@ -136,7 +136,7 @@ const data = {
     {
         "_id": "593e92970481ccf52f948e6d",
         "index": 10,
-        "price": 625917,
+        "price": 625900,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
         "city": "Philadelphia",
         "address": "687 Summer Street",
@@ -149,7 +149,7 @@ const data = {
     {
         "_id": "593e9297e09417746b79e1c5",
         "index": 11,
-        "price": 591236,
+        "price": 491200,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg",
         "city": "Philadelphia",
         "address": "183 Locust Street",
@@ -162,7 +162,7 @@ const data = {
     {
         "_id": "593e92978e7160fa2b9992d9",
         "index": 12,
-        "price": 995539,
+        "price": 495500,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
         "city": "Orovada",
         "address": "146 North Front Street",
@@ -175,7 +175,7 @@ const data = {
     {
         "_id": "593e92973459fbdfa1f1c041",
         "index": 13,
-        "price": 866924,
+        "price": 566900,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg",
         "city": "Philadelphia",
         "address": "205 Cubert Street",
@@ -188,7 +188,7 @@ const data = {
     {
         "_id": "593e92970306538830483e14",
         "index": 14,
-        "price": 810745,
+        "price": 510700,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg",
         "city": "Philadelphia",
         "address": "324 North Fourth Street",
@@ -201,7 +201,7 @@ const data = {
     {
         "_id": "593e92976042982766c97ca1",
         "index": 15,
-        "price": 793134,
+        "price": 493000,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
         "city": "Philadelphia",
         "address": "644 Wood Street",
@@ -214,7 +214,7 @@ const data = {
     {
         "_id": "593e92971901e888a036a258",
         "index": 16,
-        "price": 984589,
+        "price": 484000,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property02.jpg",
         "city": "Philadelphia",
         "address": "472 Ridge Avenue",
@@ -227,7 +227,7 @@ const data = {
     {
         "_id": "593e929780e6af9c11a10b90",
         "index": 17,
-        "price": 836244,
+        "price": 63600,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
         "city": "Philadelphia",
         "address": "455 Callowhill Street",
@@ -240,7 +240,7 @@ const data = {
     {
         "_id": "593e9297441033e3f818ff6b",
         "index": 18,
-        "price": 962426,
+        "price": 462000,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property04.jpg",
         "city": "Philadelphia",
         "address": "459 North 2nd Street",
@@ -253,7 +253,7 @@ const data = {
     {
         "_id": "593e9297964d25b59d94e8aa",
         "index": 19,
-        "price": 768916,
+        "price": 700910,
         "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property05.jpg",
         "city": "Philadelphia",
         "address": "537 North 9th Street",

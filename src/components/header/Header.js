@@ -22,8 +22,8 @@ const Header = props =>
   />
 
   <img src={image} />
-  <h1>Center City Property Listings</h1>
-  <button className="btn-filter material-button" onClick={(event) => {event.preventDefault(); props.toggleFilter()}} data-color="gray">Filter</button>
+  <h1>Center City Listings</h1>
+  <button className="btn-filter material-button dark-btn" data-color="gray" onClick={(event) => {event.preventDefault(); props.toggleFilter()}}>Filter</button>
 </header>;
 
   Header.propTypes = {

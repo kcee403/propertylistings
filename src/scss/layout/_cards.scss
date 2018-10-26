@@ -1,3 +1,9 @@
+.filterBox:nth-child(7) select {
+  width: 190%;
+  @include mediaQ('large') {
+    width: 100%;
+  }
+}
 .cards {
     max-width: 100%;
 }
@@ -36,9 +42,9 @@
         top: 0;
         right: 0;
         display: block;
-        padding: 0 10px;
+        padding: 2px 5px 1px;
         border-radius: 3px;
-        padding-top: 3px;
+
     }
     .price {
         margin: 0;
@@ -51,14 +57,15 @@
     .location {
 
     }
+
     .features {
         list-style: none;
         padding: 0;
         margin: 0;
         li {
-            padding-left: 24px;
+            // padding-left: 24px;
             margin-right: 10px;
-            display: inline-block;
+            display: inline;
             span {display: none;}
             &.icon-bed {
                 background: url(../images/bed-left-side.svg) left center;
@@ -85,7 +92,7 @@
             color: darken(gray, 8);
         .index {
             background-color:  transparentize($caribbean, 0.2);
-            border-radius: 2px;
+            border-radius: 4px;
         }
     }
 }

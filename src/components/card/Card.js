@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import {priceFormat} from '../../utils/Formatters';
-import { cardPics } from '../../images/index';
-
+import { propertyImgs, interiorImgs } from '../../images/index';
+import {Carousel} from 'react-bootstrap';
 // import Pic1 from '../../images/properties/maps1.jpg';
 // import Pic2 from '../../images/properties/maps2.jpg';
 // import Pic3 from '../../images/properties/maps3.jpg';
@@ -35,7 +35,17 @@ const Card = ({property, activeProperty, setActiveProperty}) => {
         <div id={`card-${index}`}
              className={`card-container card col-sm-12 col-md-6 col-lg-4 ${property === activeProperty ? 'is-active' : ''} `}
              onClick={() => {setActiveProperty(property, false)}}>{/* index is set the jump() */}
-            <img className="cardPic" src={cardPics[index]} alt="Singer" />
+
+            <Carousel interval={null} indicators={false}>
+                <Carousel.Item>
+                    <img alt="c" src={propertyImgs[index]} />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img alt="1300x900 property image" src={interiorImgs[index]} />
+                </Carousel.Item>
+            </Carousel>
+
+
             <p className="price">{priceFormat(price)}</p>
 
             <div className="details">
