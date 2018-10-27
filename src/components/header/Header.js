@@ -34,7 +34,6 @@ const Header = props =>
   };
 
   const mapStateToProps = (state) => {
-
     return {
         filterIsVisible: state.filter.filterIsVisible
     }

@@ -5,4 +5,9 @@ export {
 
 export {
   fetchProperties,
-} from './propertiesActions'
+} from './propertiesActions';
+
+export {
+  viewSummary,
+  closeModal,
+} from './cardActions';

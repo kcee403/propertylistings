@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import classes from './Modal.css';
 
 import Backdrop from '../Backdrop/Backdrop';
+// import { withRouter } from 'react-router';
 
+import * as actions from '../../../store/actions';
+import {connect} from 'react-redux';
 
-import { Fragment } from 'react';
+import PropertySummary from '../../propertysummary/PropertySummary';
 
 class Modal extends Component {
   shouldComponentUpdate ( nextProps, nextState ) {
@@ -17,17 +19,37 @@ class Modal extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
-          <div className={classes.Modal}
+      <div>
+        <Backdrop show={this.props.show} clicked={this.props.onCloseModal} />
+          <div className="modals propertySummary"
             style={{
-              transform: this.props.show ? 'translateY(0)' : 'translateY(-230px)',
+              transform: this.props.show ? 'translateX(0)' : 'translateX(350px)',
               opacity: this.props.show ? '1' : '0'
             }}>
+            <div onClick={() => {this.props.onCloseModal()}} className="close"><i className="fas fa-times"></i></div>
             {this.props.children}
+            {/* <button onClick={() => { this.props.history.push('/shopping-cart') } } className="pull-right material-button" data-color="orange">
+                GO TO {" "}
+                <i className="fas fa-shopping-cart"></i>
+            </button> */}
+            <PropertySummary />
           </div>
-      </Fragment>
+      </div>
     );
   }
 }
-export default Modal;
+
+const mapStateToProps = (state) => {
+
+  return {
+    isViewingSummary: state.crd.isViewingSummary,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onCloseModal: () => dispatch(actions.closeModal()),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

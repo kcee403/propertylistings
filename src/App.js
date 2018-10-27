@@ -33,7 +33,6 @@ class App extends React.Component {
       priceTo: 1000000,
       filteredProperties: [],
       isFiltering: false,
-      isViewingSummary: false,
     }
     this.setActiveProperty = this.setActiveProperty.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
@@ -106,7 +105,7 @@ class App extends React.Component {
                 filteredProperties.sort((a,b) => b.price - a.price)
                 break;
                 default:
-                 "Switch Filter Sort"
+                 "Switch Filter Sort";
             }
           return filteredProperties;
       }
@@ -136,10 +135,6 @@ class App extends React.Component {
     form.reset();
   }
 
-  closeSummaryHandler = () => {
-    this.setState({isViewingSummary: false});
-  }
-
   render(){
     const {properties, activeProperty, filterIsVisible, filteredProperties, isFiltering, filterSort} = this.state;
     const propertiesList = isFiltering ? filteredProperties : properties;
@@ -148,8 +143,9 @@ class App extends React.Component {
       const MAP_KEY = "AIzaSyAtFz6R7OtnNq7L0hemsIpvTJQEG8ZNk_E";
 
       let propertySummary = null;
-      if(this.state.isViewingSummary=== true) {
-        propertySummary = <PropertySummary />
+      if(this.state.isViewingSummary === true) {
+        propertySummary = <PropertySummary properties={properties} />
+        console.log("isViewSummary state in 'App': ", this.state.isViewingSummary);
       }
 
     return (
@@ -193,7 +189,7 @@ class App extends React.Component {
 
           </ReactDependentScript>
 
-          <Modal show={this.state.isViewingSummary} modalClosed={this.purchaseCancelHandler}>
+          <Modal show={this.props.isViewingSummary}>
             {propertySummary}
           </Modal>
 
@@ -205,7 +201,7 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
 
   return {
-
+    isViewingSummary: state.crd.isViewingSummary,
   }
 }
 

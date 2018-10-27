@@ -1,8 +1,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import {priceFormat} from '../../utils/Formatters';
+
 import { propertyImgs, interiorImgs } from '../../images/index';
 import {Carousel} from 'react-bootstrap';
+
+import * as actions from '../../store/actions';
+import {connect} from 'react-redux';
 // import Pic1 from '../../images/properties/maps1.jpg';
 // import Pic2 from '../../images/properties/maps2.jpg';
 // import Pic3 from '../../images/properties/maps3.jpg';
@@ -28,8 +32,10 @@ import {Carousel} from 'react-bootstrap';
 //                    Pic8,Pic9,Pic10,Pic11,Pic12,Pic13,Pic14,
 //                    Pic15,Pic16,Pic17,Pic18,Pic19, Pic20 ];
 
-const Card = ({property, activeProperty, setActiveProperty}) => {
+const Card = (props) => {
+      const {activeProperty, setActiveProperty, property} = props;
       const {price, address, city, picture, bedrooms, bathrooms, carSpaces, index} = property;
+
       // const pics = require(`${picture}`);
       return(
         <div id={`card-${index}`}
@@ -58,9 +64,8 @@ const Card = ({property, activeProperty, setActiveProperty}) => {
 
             <div className="details">
 
-                <span className="index">{index+1}</span>
 
-                <ul className="features">
+                <ul className="features pull-left">
                 {/*}    <li className="icon-bed">{bedrooms}<span className="bedColor">bedrooms</span></li>
                     <li className="icon-bath">{bathrooms}<span>bathrooms</span></li>
                     <li className="icon-car">{carSpaces}<span>parking spots</span></li> */}
@@ -68,7 +73,9 @@ const Card = ({property, activeProperty, setActiveProperty}) => {
                     <li className="fontawesomeIcons"> {bathrooms} <i className="fas fa-bath"></i> <span>bathrooms</span>  </li>
                     <li className="fontawesomeIcons"> {carSpaces} <i className="fas fa-car"></i> <span>parking spots</span> </li>
                 </ul>
-
+                <div className="pull-right">
+                  <button onClick={() => props.onViewSummary(property)} data-color="gray" className="material-button sm-btn">Info</button>
+                </div>
             </div>
         </div>)
 };
@@ -78,4 +85,11 @@ Card.propTypes = {
   activeProperty: PropTypes.object.isRequired,
   setActiveProperty: PropTypes.func.isRequired,
 }
-export default Card;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onViewSummary: (property) => dispatch(actions.viewSummary(property)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Card);
