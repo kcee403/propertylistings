@@ -23,8 +23,8 @@ class Modal extends Component {
         <Backdrop show={this.props.show} clicked={this.props.onCloseModal} />
           <div className="modals propertySummary"
             style={{
-              transform: this.props.show ? 'translateX(0)' : 'translateX(350px)',
-              opacity: this.props.show ? '1' : '0'
+              transform: this.props.show ? 'translateY(0)' : 'translateY(1400px)',
+              opacity: this.props.show ? '1' : '0',
             }}>
             <div onClick={() => {this.props.onCloseModal()}} className="close"><i className="fas fa-times"></i></div>
             {this.props.children}

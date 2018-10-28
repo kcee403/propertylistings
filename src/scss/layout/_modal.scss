@@ -1,11 +1,42 @@
 .propertySummary {
   width: 94%;
   border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 0px 1px 7px rgba(20, 20, 20, 0.65);
   padding: 16px;
   left: 3%;
   top: 4%;
   font-family: 'EB Garamond';
+  border-radius: 5px;
+  @include mediaQ('small') {
+    left: 12%;
+    top: 12%;
+    width: 60%;
+  }
+  @include mediaQ('extraLarge') {
+    left: 24%;
+    top: 12%;
+    width: 40%;
+  }
+  .summary-body {
+    margin-top: 15px;
+    font: 1.3rem 'Montserrat';
+    @include mediaQ('small') {
+      font: 1.7rem 'Montserrat';
+    }
+    // .carousel-inner {
+    //   font-size: 2rem;
+    //   @include mediaQ('small') {
+    //     font-size: 4rem;
+    //   }
+    // }
+    ul {
+      padding: 0px;
+      li {
+        display: inline-block;
+        margin: 0px 9px 0px 0px;
+      }
+    }
+  }
 }
 
 .modals {
@@ -13,7 +44,7 @@
     z-index: 500;
     background-color: white;
     box-sizing: border-box;
-    transition: all 0.095s ease-out;
+    transition: all 0.2s ease-out;
     @include mediaQ('medium') {
 
     }

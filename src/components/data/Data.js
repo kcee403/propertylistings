@@ -12,7 +12,8 @@ const data = {
         "longitude": -75.14703154563905,
         "bedrooms": 2,
         "bathrooms": 2,
-        "carSpaces": 2
+        "carSpaces": 2,
+        "status": "Sale"
     },
     {
         "_id": "593e9297ec4cca9c56bf61af",
@@ -26,7 +27,8 @@ const data = {
         "longitude": -75.14535248279573,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e929773c71925e5d7c11c",
@@ -40,7 +42,8 @@ const data = {
         "longitude": -75.14390945434572,
         "bedrooms": 3,
         "bathrooms": 2,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Recently Sold"
     },
     {
         "_id": "593e92973d4d15eedb129aee",
@@ -53,7 +56,8 @@ const data = {
         "longitude": -75.15833973884584,
         "bedrooms": 3,
         "bathrooms": 2,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e929728b7f8543b7907e1",
@@ -66,7 +70,8 @@ const data = {
         "longitude": -75.16453027725221,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Sale"
     },
     {
         "_id": "593e92975996a6263d146444",
@@ -79,7 +84,8 @@ const data = {
         "longitude": -75.17368733882905,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Recently Sold"
     },
     {
         "_id": "593e9297a13e246da5ba0884",
@@ -92,7 +98,8 @@ const data = {
         "longitude": -75.17594039440156,
         "bedrooms": 2,
         "bathrooms": 2,
-        "carSpaces": 2
+        "carSpaces": 2,
+        "status": "Sale"
     },
     {
         "_id": "593e9297afa51a013fcd07d5",
@@ -105,7 +112,8 @@ const data = {
         "longitude": -75.1636987924576,
         "bedrooms": 4,
         "bathrooms": 1,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Rent"
     },
     {
         "_id": "593e92972bd8fd05f2ab1a89",
@@ -118,7 +126,8 @@ const data = {
         "longitude": -75.15016973018648,
         "bedrooms": 3,
         "bathrooms": 1,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e9297fe2e6d32c859ecf4",
@@ -131,7 +140,8 @@ const data = {
         "longitude": -75.17152547836305,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Rent"
     },
     {
         "_id": "593e92970481ccf52f948e6d",
@@ -144,7 +154,8 @@ const data = {
         "longitude": -75.17643928527833,
         "bedrooms": 4,
         "bathrooms": 1,
-        "carSpaces": 2
+        "carSpaces": 2,
+        "status": "Rent"
     },
     {
         "_id": "593e9297e09417746b79e1c5",
@@ -157,7 +168,8 @@ const data = {
         "longitude": -75.14277756214143,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Sale"
     },
     {
         "_id": "593e92978e7160fa2b9992d9",
@@ -170,7 +182,8 @@ const data = {
         "longitude": -75.1431852579117,
         "bedrooms": 1,
         "bathrooms": 2,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e92973459fbdfa1f1c041",
@@ -183,7 +196,8 @@ const data = {
         "longitude": -75.14361977577211,
         "bedrooms": 1,
         "bathrooms": 1,
-        "carSpaces": 2
+        "carSpaces": 2,
+        "status": "Recently Sold"
     },
     {
         "_id": "593e92970306538830483e14",
@@ -196,7 +210,8 @@ const data = {
         "longitude": -75.14184951782228,
         "bedrooms": 2,
         "bathrooms": 2,
-        "carSpaces": 2
+        "carSpaces": 2,
+        "status": "Sale"
     },
     {
         "_id": "593e92976042982766c97ca1",
@@ -209,7 +224,8 @@ const data = {
         "longitude": -75.1557755470276,
         "bedrooms": 2,
         "bathrooms": 1,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e92971901e888a036a258",
@@ -222,7 +238,8 @@ const data = {
         "longitude": -75.15479385852815,
         "bedrooms": 1,
         "bathrooms": 1,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Rent"
     },
     {
         "_id": "593e929780e6af9c11a10b90",
@@ -235,7 +252,8 @@ const data = {
         "longitude": -75.15149474143983,
         "bedrooms": 1,
         "bathrooms": 2,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     {
         "_id": "593e9297441033e3f818ff6b",
@@ -248,7 +266,8 @@ const data = {
         "longitude": -75.14246106147768,
         "bedrooms": 3,
         "bathrooms": 2,
-        "carSpaces": 1
+        "carSpaces": 1,
+        "status": "Rent"
     },
     {
         "_id": "593e9297964d25b59d94e8aa",
@@ -261,7 +280,8 @@ const data = {
         "longitude": -75.15401601791383,
         "bedrooms": 3,
         "bathrooms": 2,
-        "carSpaces": 0
+        "carSpaces": 0,
+        "status": "Rent"
     },
     // {
     //     "_id": "593e929737636c879539416d",

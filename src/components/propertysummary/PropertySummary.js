@@ -12,11 +12,11 @@ class PropertySummary extends Component {
     const {price, address, city, picture, bedrooms, bathrooms, carSpaces, index} = this.props.propertySummary;
 
     return (
-      <Fragment>
+      <div className="">
         <Carousel interval={null} indicators={false}>
             <Carousel.Item>
                 <img alt="c" src={propertyImgs[index]} />
-                <Carousel.Caption>
+                <Carousel.Caption style={{fontSize: "2rem"}}>
                 <p className="">
                     {city}<br />{address}
                 </p>
@@ -24,20 +24,22 @@ class PropertySummary extends Component {
             </Carousel.Item>
             <Carousel.Item>
                 <img alt="1300x900 property image" src={interiorImgs[index]} />
-                <Carousel.Caption style={{fontSize: "2.2rem"}}>
+                <Carousel.Caption style={{fontSize: "2rem"}}>
 
                 Beautiful home on in the greater Philadelphia area. Call for more info.
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        <div className="summary-card-body">
+        <div className="summary-body">
                 <p className="">Price: {price}</p>
-                <p className="">Address: {address}</p>
-                <p className="">Bedrooms: {bedrooms}</p>
-                <p className="">Bathrooms: {bathrooms}</p>
-                <p className="">Car Spaces: {carSpaces}</p>
+                <ul>
+                    <li className="">Bedrooms: {bedrooms}</li>
+                    <li className="">Bathrooms: {bathrooms}</li>
+                    <li className="">Car Spaces: {carSpaces}</li>
+                </ul>
+                <p>Contact us (555) 525 5225 for more info</p>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }
