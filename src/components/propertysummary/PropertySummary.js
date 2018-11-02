@@ -59,6 +59,7 @@ class PropertySummary extends Component {
                  {statusColor !== 'red' ? 'For' : ''}
                  {" " + status}</p>
                 <p className="">Price: {"$" + price}</p>
+                <p className="">Estimated Mortgage: {"$" + (price*0.004157333).toFixed(2)}</p>
 
                 <ul>
                {/*  <li className="">Bedrooms: {bedrooms} <i className="fas fa-bed"></i> </li>

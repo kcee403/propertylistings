@@ -15,7 +15,7 @@ header {
     background-color: lighten($navyBlue, 14);
     img {
         max-width: 40px;
-        background-color: transparentize($lightGray, 0.2);
+        background-color: lighten($lightGray, 6);
         border-radius: 8px;
         padding: 4%;
         @include mediaQ('small') {

@@ -34,7 +34,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1974
+        "yearbuilt": 1954
     },
     {
         "_id": "593e929773c71925e5d7c11c",
@@ -69,7 +69,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1979
+        "yearbuilt": 1959
     },
     {
         "_id": "593e929728b7f8543b7907e1",
@@ -103,7 +103,7 @@ const data = {
         "status": "Sold",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1978
+        "yearbuilt": 1958
     },
     {
         "_id": "593e9297a13e246da5ba0884",
@@ -120,7 +120,7 @@ const data = {
         "status": "Sale",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1976
+        "yearbuilt": 1956
     },
     {
         "_id": "593e9297afa51a013fcd07d5",
@@ -222,7 +222,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1977
+        "yearbuilt": 1957
     },
     {
         "_id": "593e92973459fbdfa1f1c041",
@@ -239,7 +239,7 @@ const data = {
         "status": "Sold",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1974
+        "yearbuilt": 1954
     },
     {
         "_id": "593e92970306538830483e14",
@@ -256,7 +256,7 @@ const data = {
         "status": "Sale",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1974
+        "yearbuilt": 1954
     },
     {
         "_id": "593e92976042982766c97ca1",
@@ -290,7 +290,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1978
+        "yearbuilt": 1958
     },
     {
         "_id": "593e929780e6af9c11a10b90",
@@ -307,7 +307,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1975
+        "yearbuilt": 1955
     },
     {
         "_id": "593e9297441033e3f818ff6b",
@@ -324,7 +324,7 @@ const data = {
         "status": "Rent",
         "type": "House",
         "daysposted": 15,
-        "yearbuilt": 1978
+        "yearbuilt": 1958
     },
     {
         "_id": "593e9297964d25b59d94e8aa",

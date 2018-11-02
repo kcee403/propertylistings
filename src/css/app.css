@@ -41,7 +41,7 @@ header {
   background-color: #3f6895; }
   header img {
     max-width: 40px;
-    background-color: rgba(217, 217, 217, 0.8);
+    background-color: #e8e8e8;
     border-radius: 8px;
     padding: 4%;
     /*'small' is in the map of variables aka properties*/ }
@@ -378,6 +378,8 @@ html, body {
   top: 4%;
   font-family: 'EB Garamond';
   border-radius: 5px;
+  border-top: 4px solid #4572a4;
+  border-bottom: 4px solid #4572a4;
   /*'small' is in the map of variables aka properties*/
   /*'small' is in the map of variables aka properties*/ }
   @media (min-width: 576px) {
