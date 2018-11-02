@@ -16,6 +16,8 @@ import ReactDependentScript from 'react-dependent-script';
 import * as actions from './store/actions';
 import {connect} from 'react-redux';
 
+import axios from 'axios';
+
 class App extends React.Component {
 
   constructor(props){
@@ -38,6 +40,17 @@ class App extends React.Component {
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.filterProperties = this.filterProperties.bind(this);
     this.clearFilter = this.clearFilter.bind(this);
+  }
+
+  componentDidMount() {
+    axios.post('http://www.realmassive.com/api/v1/spaces/search/', "Austin")
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(error => {
+    console.log(error.response)
+});
   }
 
   setActiveProperty(property, scroll) {
@@ -135,18 +148,18 @@ class App extends React.Component {
     form.reset();
   }
 
-  render(){
+  render() {
     const {properties, activeProperty, filterIsVisible, filteredProperties, isFiltering, filterSort} = this.state;
     const propertiesList = isFiltering ? filteredProperties : properties;
 
     // now sort the propertiesList
       const MAP_KEY = "AIzaSyAtFz6R7OtnNq7L0hemsIpvTJQEG8ZNk_E";
-
-      let propertySummary = null;
-      if(this.state.isViewingSummary === true) {
-        propertySummary = <PropertySummary properties={properties} />
-        console.log("isViewSummary state in 'App': ", this.state.isViewingSummary);
-      }
+      // let propertySummary = null;
+      // if(this.props.isViewingSummary === true) {
+      //   propertySummary = <PropertySummary propertySummary={this.props.propertySummary} />
+      //   console.log("isViewSummary state in 'App': ", this.props.isViewingSummary);
+      // }
+      let propertySummary = this.props.isViewingSummary === true ? <PropertySummary propertySummary={this.props.propertySummary} /> : null;
 
     return (
       <div>
@@ -202,6 +215,7 @@ const mapStateToProps = (state) => {
 
   return {
     isViewingSummary: state.crd.isViewingSummary,
+    propertySummary: state.crd.property,
   }
 }
 

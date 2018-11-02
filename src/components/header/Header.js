@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../images/house-location-pin.svg'
+import image from '../../images/icons/logo/center-city-logo.jpg';
 import PropTypes from 'prop-types';
 import Filter from './filter/Filter';
 

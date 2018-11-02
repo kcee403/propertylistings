@@ -32,7 +32,9 @@ class Modal extends Component {
                 GO TO {" "}
                 <i className="fas fa-shopping-cart"></i>
             </button> */}
+            {/*
             <PropertySummary />
+            */}
           </div>
       </div>
     );

@@ -40,7 +40,14 @@ header {
   position: relative;
   background-color: #3f6895; }
   header img {
-    max-width: 40px; }
+    max-width: 40px;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 8px;
+    padding: 4%;
+    /*'small' is in the map of variables aka properties*/ }
+    @media (min-width: 576px) {
+      header img {
+        padding: 1.1%; } }
   header h1 {
     display: inline-block;
     font-size: 16px;
