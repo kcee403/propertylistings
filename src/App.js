@@ -43,10 +43,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.post('http://www.realmassive.com/api/v1/spaces/search/', "Austin")
+    axios.get('http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz1gqfmq0y1or_5jgqp&state=wa&city=seattle&childtype=neighborhood',)
       .then(res => {
         console.log(res);
-        console.log(res.data);
       })
       .catch(error => {
     console.log(error.response)

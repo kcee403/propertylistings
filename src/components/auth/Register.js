@@ -21,10 +21,7 @@ class Register extends Component {
   }
 
   componentDidMount() {
-     $(".input-button button").click(function(event) {
 
-     $(".form-wrapper").addClass("send");
-   });
   }
 
   handleEmailChange = event => {
@@ -84,22 +81,8 @@ class Register extends Component {
     return (
 <div className="form-body ">
 
-    <div className="col-md-3 form-side-header">
-        <h3 style={{color: 'white'}}>Sign Up to start purchasing your favorite films!</h3>
-        <h4>
-            Already Registered? <NavLink to="/login"> <strong>Login here..</strong> </NavLink>
-        </h4>
-        <h4>
-            ..Or head <NavLink to="/"> <strong>back</strong> <i className="fas fa-arrow-left"></i> </NavLink>
-        </h4>
-    </div>
+  
     <form className="form-wrapper register-wrapper form-header" onSubmit={this.handleSubmit}>
-        <h2 className="form-title ">Signup with <span className="kcflix">KC-FLIX</span></h2>
-
-        <div className="success">
-          <i className="fa fa-check fa-3x"></i>
-          <h1>Thank you for subscribing</h1>
-        </div>
 
         <div className="input-text">
           <input type="text" id="label2" placeholder="E-mail" name="email"
@@ -127,10 +110,6 @@ class Register extends Component {
           onChange={this.handleStateChange}
           value={this.state.state} />
           <label htmlFor="label6">State</label>
-        </div>
-
-        <div className="input-button">
-          <button type="submit"><i className="fa fa-paper-plane"></i></button>
         </div>
 
     </form>
