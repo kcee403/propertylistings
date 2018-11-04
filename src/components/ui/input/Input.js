@@ -24,7 +24,7 @@ const input = props => {
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed} />;
-          console.log("Input Classes inside inputElement: ", inputClasses);
+          console.log("Input 'props.value:' ", props.value);
       break;
     case ('textarea'):
       inputElement =

@@ -117,8 +117,8 @@ class Register extends Component {
               value: '',
               validation: {
                   required: true,
-                  minLength: 6,
-                  isZipCode: true,
+                  minLength: 5,
+                  isNumeric: true,
               },
               valid: false,
               touched: false
@@ -176,6 +176,7 @@ class Register extends Component {
       }
     };
     this.setState({controls: updatedControls});
+
   }
 
   //======== END OF MAX =========//
@@ -188,6 +189,7 @@ class Register extends Component {
     this.setState({
       email: event.target.value,
     });
+    console.log("Register - state: ", this.state.email)
   }
 
   handlePasswordChange = event => {
@@ -219,15 +221,20 @@ class Register extends Component {
       zipcode: event.target.value });
   }
 
+  submitHandler = event => {
+    event.preventDefault();
+    this.props.onAuth(this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup);
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
     const user = {
-      email: this.state.email,
-      password: this.state.password,
-      address: this.state.address,
-      city: this.state.city,
-      state: this.state.state,
+      email: this.state.controls.email.value,
+      password: this.state.controls.password.value,
+      address: this.state.controls.address.value,
+      city: this.state.controls.city.value,
+      state: this.state.controls.state.value,
     };
     axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAa3ZDLm6gTLU-VXogMORK4J90wzYf8nXo', user)
       .then(res => {
@@ -275,6 +282,7 @@ class Register extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     onLoginSuccess: userId => dispatch(actions.loginSuccess(userId)),
+    onAuth: (email, password, isSignup) => dispatch(actions.auth(email, password, isSignup)),
   };
 };
  export default connect(null, mapDispatchToProps)(withErrorHandler(Register, axios));

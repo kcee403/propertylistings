@@ -13,6 +13,7 @@ export {
 } from './cardActions';
 
 export {
+    auth,
     logout,
     login,
     attemptLogin,
