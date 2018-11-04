@@ -70,28 +70,28 @@ class PropertySummary extends Component {
                     <li className="">Year Built: {yearbuilt} <i className="far fa-building"></i> </li> */}
                     <Grid>
                       <Row className="show-grid">
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                               <li className="">Bedrooms: {bedrooms} <i className="fas fa-bed"></i> </li>
                           </Col>
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                             <li className="">Bathrooms: {bathrooms} <i className="fas fa-bath"></i> </li>
                           </Col>
                       </Row>
 
                       <Row className="show-grid">
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                             <li className="">Car Spaces: {carSpaces} <i className="fas fa-car"></i> </li>
                           </Col>
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                             <li className="">Type: {type} <i className="fas fa-home"></i> </li>
                           </Col>
                       </Row>
 
                       <Row className="show-grid">
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                             <li className="">Days Posted: {daysposted} <i className="fas fa-calendar-alt"></i> </li>
                           </Col>
-                          <Col xs={4} md={4}>
+                          <Col xs={4} md={2}>
                             <li className="">Year Built: {yearbuilt} <i className="far fa-building"></i> </li>
                           </Col>
                       </Row>

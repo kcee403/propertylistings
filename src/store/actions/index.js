@@ -11,3 +11,12 @@ export {
   viewSummary,
   closeModal,
 } from './cardActions';
+
+export {
+    logout,
+    login,
+    attemptLogin,
+    closingModal,
+    loginSuccess,
+    setAuthRedirectPath,
+} from './authActions';

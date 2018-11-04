@@ -15,16 +15,16 @@ const onToggleFilter = event => {
 }
 
 const Header = props =>
-<header className={`${props.filterIsVisible ? 'filter-is-visible': ''}`}>
+    <header className={`${props.filterIsVisible ? 'filter-is-visible': ''}`}>
+        <button className="btn-login pull-right" onClick={() => {props.onAttemptLogin()}}>Sign Up</button>
+        <Filter handleFilterChange={props.handleFilterChange}
+                clearFilter={props.clearFilter}
+        />
 
-  <Filter handleFilterChange={props.handleFilterChange}
-          clearFilter={props.clearFilter}
-  />
-
-  <img src={image} />
-  <h1>Center City Listings</h1>
-  <button className="btn-filter material-button dark-btn" data-color="gray" onClick={(event) => {event.preventDefault(); props.toggleFilter()}}>Filter</button>
-</header>;
+        <img src={image} />
+        <h1>Center City Listings</h1>
+        <button className="btn-filter material-button dark-btn" data-color="gray" onClick={(event) => {event.preventDefault(); props.toggleFilter()}}>Filter</button>
+    </header>;
 
   Header.propTypes = {
      filterIsVisible: PropTypes.bool.isRequired,
@@ -42,6 +42,7 @@ const Header = props =>
   const mapDispatchToProps = dispatch => {
     return {
             toggleFilter: () => dispatch(actions.toggleFilter()),
+            onAttemptLogin: () => dispatch(actions.attemptLogin()),
     }
   }
 

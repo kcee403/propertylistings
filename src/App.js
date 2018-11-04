@@ -4,9 +4,10 @@ import image from './images/location-map.svg';
 import data from './components/data/Data';
 import Card from './components/card/Card';
 import Header from './components/header/Header';
-import Modal from './components/ui/Modal/Modal';
+import Modal from './components/ui/modal/Modal';
 import GoogleMap from './components/googlemap/GoogleMap';
 import PropertySummary from './components/propertysummary/PropertySummary';
+import Register from './components/auth/Register';
 
 import jump from 'jump.js';
 import {easeInOutCubic} from './utils/Easing';
@@ -35,6 +36,7 @@ class App extends React.Component {
       priceTo: 1000000,
       filteredProperties: [],
       isFiltering: false,
+      modalShow: this.props.isViewingSummary !== false && this.props.isAttemptingLogin !== false,
     }
     this.setActiveProperty = this.setActiveProperty.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
@@ -43,13 +45,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz1gqfmq0y1or_5jgqp&state=wa&city=seattle&childtype=neighborhood',)
-      .then(res => {
-        console.log(res);
-      })
-      .catch(error => {
-    console.log(error.response)
-});
+//     axios.get('http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz1gqfmq0y1or_5jgqp&state=wa&city=seattle&childtype=neighborhood',)
+//       .then(res => {
+//         console.log(res);
+//       })
+//       .catch(error => {
+//     console.log(error.response)
+// });
   }
 
   setActiveProperty(property, scroll) {
@@ -158,7 +160,17 @@ class App extends React.Component {
       //   propertySummary = <PropertySummary propertySummary={this.props.propertySummary} />
       //   console.log("isViewSummary state in 'App': ", this.props.isViewingSummary);
       // }
-      let propertySummary = this.props.isViewingSummary === true ? <PropertySummary propertySummary={this.props.propertySummary} /> : null;
+
+      let propertySummary = null;
+      let login = "";
+
+      if(this.props.isAttemptingLogin) {
+        propertySummary = null;
+        login = <Register />;
+      }
+       else {
+         propertySummary = <PropertySummary propertySummary={this.props.propertySummary} />;
+       }
 
     return (
       <div>
@@ -204,7 +216,9 @@ class App extends React.Component {
           <Modal show={this.props.isViewingSummary}>
             {propertySummary}
           </Modal>
-
+          <Modal show={this.props.isAttemptingLogin}>
+              {login}
+          </Modal>
       </div>
     )
   }
@@ -215,12 +229,14 @@ const mapStateToProps = (state) => {
   return {
     isViewingSummary: state.crd.isViewingSummary,
     propertySummary: state.crd.property,
+    isAttemptingLogin: state.auth.isAttemptingLogin,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     onFetchProperties: () => dispatch(actions.fetchProperties),
+    onAttemptLogin: () => dispatch(actions.attemptLogin),
   }
 }
 

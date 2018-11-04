@@ -1,3 +1,47 @@
+.input {
+  color: gray;
+  select {
+    border-radius: 4px;
+    box-shadow: none;
+    border-color: transparent;
+    // border-color: lighten($navyBlue, 20);
+    background-color: #f0f0f0;
+    &:active, &:focus {
+      color: darken(gray, 15);
+    }
+  }
+    label {
+      display: block;
+      color: gray;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 2px;
+    }
+}
+
+.btn-login {
+    top: 3%;
+    right: 3%;
+    position: absolute;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: white;
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
+    @include mediaQ('small') {
+      font-size: 1.36rem;
+    }
+    @include mediaQ('large') {
+      font-size: 1.5rem;
+    }
+}
+
 //========= PETER TICHY ============
 .btn-filter {
     margin-left: 15px;
@@ -9,7 +53,7 @@
     // border: 1px #fff solid;
     // transition: all 0.3s linear;
     display: block;
-    width: 100%;
+    // width: 100%;
     &:hover,
     &:active {
         // background-color: $caribbean;
@@ -65,7 +109,6 @@
   padding: 0.4rem .9rem;
   text-transform: uppercase;
   box-shadow: 0px 4px 8px $gray;
-  width: 85px;
   transition: transform 0.18s ease-in, box-shadow 0.09s ease-in;
 	// background-image: linear-gradient(45deg, rgb(248, 54, 0), #ff9a00);
   &:hover {
@@ -115,7 +158,7 @@
 .sm-btn {
   padding: 0.4rem .9rem;
   box-shadow: 0px 4px 8px $gray;
-  width: 55px;
+
   font-size: 1.2rem;
 }
 

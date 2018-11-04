@@ -12,10 +12,10 @@ header {
     padding: 30px;
     z-index: 2;
     position: relative;
-    background-color: lighten($navyBlue, 14);
+    background-color: lighten($navyBlue, 6);
     img {
         max-width: 40px;
-        background-color: lighten($lightGray, 6);
+        background-color: lighten($lightGray, 12);
         border-radius: 8px;
         padding: 4%;
         @include mediaQ('small') {
@@ -45,6 +45,7 @@ header {
             text-decoration: none;
         }
     }
+
     @media (min-width: 992px) {
         h1 {
             font-size: 20px;
