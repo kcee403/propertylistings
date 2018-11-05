@@ -87,10 +87,3 @@ export const auth = (email, password, isSignup) => {
       });
     };
 };
-
-
-// export const closeLogin = () => {
-//   return {
-//     type: actionTypes.CLOSELOGIN,
-//   };
-// }
